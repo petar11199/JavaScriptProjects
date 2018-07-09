@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./ticTacToe.css">
+</head>
+
+<body>
+
+    <div class="scoreboard fx">
+        <div class="score">
+            <h1>Your wins</h1>
+            <h2 id="human"></h2>
+        </div>
+        <div class="score">
+            <h1>Bot wins</h1>
+            <h2 id="bot"></h2>
+        </div>
+
+        <div class="score">
+            <h1>Draws</h1>
+            <h2 id="draw"></h2>
+        </div>
+    </div>
+
+    <ul id="app"></ul>
+    <div class="winMsgCont fx">
+        <span class="winMsg"></span>
+        <button class="playAgain">Play again?</button>
+    </div>
+
+    <div class="options fx">
+        <div class="hoverTop"></div>
+        <div class="option">
+            <h1>Who plays first?</h1>
+            <div class="fx fx--center">
+                <label for="first">Human</label>
+                <input id="first" class="firstClass" type="checkbox">
+                <label for="first"></label>
+                <label for="first" id="test">Bot</label>
+            </div>
+        </div>
+        <div class="option">
+            <h1>Difficulty</h1>
+            <div class="fx">
+                <input id="idiot" type="radio" name="diff" checked>
+                <label for="idiot" class="diffBox">Idiot</label>
+
+                <!-- <input id="master" type="radio" name="diff"> -->
+                <label for="master" class="diffBox">Master</label>
+            </div>
+        </div>
+        <div>
+            <h1>&zwnj;</h1>
+            <div id="save">Save</div>
+        </div>
+    </div>
+
+    <script src=".//ticTacToe.js"></script>
+</body>
+
+</html>
