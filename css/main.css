@@ -1,0 +1,285 @@
+@font-face {
+    font-family: moolboran;
+    src: url('../fonts/MoolBoran.ttf');
+}
+
+@font-face {
+    font-family: glacial;
+    src: url('../fonts/GlacialIndifference.otf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: moolboran, "Courier New", monospace;
+    font-weight: 100;
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+h2 {
+    font-family: glacial, "Courier New", monospace;
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+span {
+    font-family: moolboran, "Courier New", monospace;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.fx {
+    display: flex;
+}
+
+.landing {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navigation {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 40px;
+}
+
+.burger-container {
+    direction: rtl;
+}
+
+.burger-line {
+    width: 30px;
+    height: 3px;
+    background: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.burger-line:nth-of-type(2) {
+    width: 20px;
+}
+
+.social {
+    width: 100px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.social-img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
+.main-img {
+    width: 500px;
+}
+
+.center-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heading h1 {
+    margin-bottom: -15px;
+    position: relative;
+    color: rgba(0, 0, 0, 0);
+}
+.heading h2 {
+    position: relative;
+    color: rgba(0, 0, 0, 0);
+}
+
+.heading h1,
+.heading h2 {
+    animation: show 100ms 800ms forwards;
+}
+
+.heading h1::after,
+.heading h2:after {
+    position: absolute;
+    width: 0;
+    height: 40px;
+    content: '';
+    top: 0;
+    right: 0;
+    background: #1a1a1a;
+    animation: blackbar 800ms 800ms cubic-bezier(.67,.47,0,.43) reverse;
+}
+.heading h1::before,
+.heading h2::before {
+    position: absolute;
+    width: 0;
+    height: 40px;
+    content: '';
+    top: 0;
+    background: #1a1a1a;
+    animation: blackbar 800ms cubic-bezier(.67,.47,0,.43);
+}
+
+.heading h2::after,
+.heading h2::before {
+    height: 25px;
+    animation-duration: 1s;
+}
+.heading h2::after {
+    animation-delay: 1s;
+}
+
+@keyframes blackbar {
+    to {width: 100%;}
+}
+@keyframes show {
+    to {color: #1a1a1a}
+}
+
+.scroll-down span{
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+    transform: rotate(90deg);
+}
+.line {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: #1a1a1a;
+    position: absolute;
+    bottom: 0;
+    right: 45px;
+}
+
+
+/* CRAFTED */
+.crafted {
+    width: 100%;
+    padding: 200px 0 200px 10%;
+    flex-direction: column;
+}
+.crafted h1::after {
+    position: absolute;
+    content: '';
+    background: #1a1a1a;
+    width: 80px;
+    height: 3px;
+    top: 35px;
+    margin-left: 20px;
+}
+
+.crafted h1 {
+    text-transform: none;
+    font-size: 70px;
+    position: relative;
+}
+
+
+/* PROJECTS */
+.project {
+    justify-content: space-between;
+    width: 100%;
+    padding: 100px 150px 100px 5%;
+}
+.project-name {
+    flex-direction: column;
+}
+.project-name h1 {
+    margin-bottom: -5px;
+    font-size: 35px;
+}
+.left-side {
+    justify-content: center;
+    align-items: flex-start;
+}
+.right-side {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.number {
+    font-size: 30px;
+    text-align: center;
+    font-family: glacial, "Courier New", monospace;
+    margin-right: 25px;
+}
+.project-name h1::before {
+    position: absolute;
+    content: '';
+    background: #1a1a1a;
+    width: 100px;
+    height: 2px;
+    top: 20px;
+    left: -200px;
+}
+.arrow {
+    width: 160px;
+    height: 2px;
+    background: #1a1a1a;
+    position: relative;
+}
+.arrow::after {
+    position: absolute;
+    content: '';
+    background: #1a1a1a;
+    width: 25px;
+    height: 2px;
+    top: -8px;
+    right: -5px;
+    transform: rotate(45deg);
+}
+.arrow::before {
+    position: absolute;
+    content: '';
+    background: #1a1a1a;
+    width: 25px;
+    height: 2px;
+    top: 9px;
+    right: -5px;
+    transform: rotate(-45deg);
+}
+.view {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 100px;
+    text-align: center;
+    opacity: 0.5;
+}
