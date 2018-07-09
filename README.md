@@ -5,4 +5,5 @@ If you wish to see code for every one of them, visit `pages` folder and `js` fol
 
 So far you can find:
 
-> #01 - Tic Tac Toe; #02 - Analog Clock;
+> #01 - Tic Tac Toe; 
+> #02 - Analog Clock;
