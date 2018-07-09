@@ -180,7 +180,7 @@ span {
     right: 0;
     transform: rotate(90deg);
 }
-.line {
+.lineScroll {
     content: '';
     width: 2px;
     height: 100px;
@@ -241,6 +241,7 @@ span {
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 20px;
+    z-index: 999;
 }
 .number {
     font-size: 30px;
@@ -248,6 +249,7 @@ span {
     font-family: glacial, "Courier New", monospace;
     margin-right: 25px;
     transition: var(--transition);
+    transition-delay: 200ms;
 }
 .project-name h1::before {
     position: absolute;
@@ -312,6 +314,17 @@ span {
     opacity: 0;
     transition: var(--transition);
 }
+.line {
+    content: '';
+    width: 4%;
+    background: #1a1a1a;
+    transition: 400ms ease-out;
+    position: absolute;
+    left: 0;
+    top: 117px;
+    height: 2px;
+    transition: var(--transition);
+}
 
 /* JS ANIMATIONS */
 .active .arrow {
@@ -328,6 +341,10 @@ span {
 .active .slideInBg {
     opacity: 1;
     width: 500px;
+    transition: var(--transition);
+}
+.active .line {
+    width: 300px;
     transition: var(--transition);
 }
 .active .view {
@@ -348,7 +365,6 @@ span {
     background-size: 100px;
     background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.2"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 }
-
 .active .project-name h1 {
     margin-left: 200px;
     transition: var(--transition);
@@ -360,5 +376,5 @@ span {
 .active .number {
     transform: translateX(30px);
     opacity: 0;
-    transition: 500ms ease-in;
+    transition: 400ms ease-in;
 }
