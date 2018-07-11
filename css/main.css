@@ -235,7 +235,7 @@ span {
 /* CRAFTED */
 .crafted {
     width: 100%;
-    padding: 200px 0 200px 10%;
+    padding: 200px 40px 200px 10%;
     flex-direction: column;
 }
 
@@ -322,6 +322,10 @@ span {
     justify-content: space-between;
     padding-bottom: 20px;
     z-index: 999;
+}
+.right-side[href=''] { display: none }
+.active:last-child .slideInBg {
+    display: none;
 }
 .number {
     font-size: 30px;
@@ -462,7 +466,7 @@ span {
 .navFixed {
     position: fixed;
     padding: 0;
-    margin-top: -12px;
+    margin-top: -13px;
 }
 .navFixed .burger-container,
 .navFixed .logo-container{
@@ -494,3 +498,70 @@ span {
     from {transform: translateX(-100px)}
     to {transform: translateX(0)}
 }
+
+@media (max-width: 1150px) { 
+    .project {
+        flex-direction: column;
+        padding: 50px 100px 50px 5%;
+    }
+    .left-side {
+        align-self: flex-start;
+    }
+    .right-side {
+        align-items: flex-end;
+        margin-top: 80px;
+    }
+    .view {
+        margin-top: 20px;
+    }
+    .slideInBg {
+        top: initial;
+        bottom: 55px;
+    }
+    .active .slideInBg {
+        width: 350px;
+    }
+    .project .line {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) { 
+    .project .line {
+        display: none;
+    }
+    .crafted h1 {
+        line-height: 0.7;
+    }
+    .activeBar h1::after,
+    .activeBar h1::before,
+    .activeBar h2::after,
+    .activeBar h2::before{
+        opacity: 0;
+    }
+    .activeBar h1,
+    .activeBar h2 {
+        animation: show 700ms ease-in-out forwards;
+    }
+}
+
+@media (max-width: 1000px) { 
+    .social {
+        align-items: flex-end
+    }
+    .social-img {
+        margin-bottom: 20px;
+    }
+    .main-img {
+        position: absolute;
+        right: 30px;
+        opacity: 0.2;
+        width: 450px;
+    }
+    .heading {
+        position: absolute;
+        left: 50px;
+    }
+}
+
+

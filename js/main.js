@@ -4,14 +4,20 @@ const navigation = document.querySelector('.navigation');
 const logo = document.querySelector('.logo');
 const loader = document.querySelector('.loader');
 
+
+// Animate projects on mouse in and mouse out
 function animateProject() {
-    if (this.classList.contains('active')) {
-        this.classList.remove('active');
-    } else {
-        this.classList.add('active');
+    if (window.innerWidth > 700) {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else {
+            this.classList.add('active');
+        }
     }
+
 }
 
+// Animating navigation and text
 function showOnScroll() {
     if (window.scrollY >= 200) {
         navigation.classList.add('navFixed');
@@ -26,19 +32,8 @@ function showOnScroll() {
     }
 }
 
-// window.onload = () => {
-//     setTimeout(() => {
-//     console.log('loaded')
-//     loader.classList.add('fullyLoaded');
-//     const heading = document.querySelector('.heading');
-//     heading.classList.add('loaded');
-//     }, 1000);
-// }
-
-
-
 // Limit the time function is called
-function debounce(func, wait, immediate = true) {
+function debounce(func, wait = 20, immediate = true) {
     var timeout;
     return function() {
         var context = this, args = arguments;
@@ -53,16 +48,21 @@ function debounce(func, wait, immediate = true) {
     }
 }
 
+// Scroll to top
 logo.addEventListener('click', () => {
     window.scroll({
         top: 0,
         behavior: "smooth"
       });
 })
+
 projects.forEach(project => project.addEventListener('mouseenter', animateProject));
 projects.forEach(project => project.addEventListener('mouseleave', animateProject));
-window.addEventListener('scroll', showOnScroll);
 
+window.addEventListener('scroll', debounce(showOnScroll));
+
+
+// Listen when page is loaded and remove loader and add animations
 window.addEventListener("load", function(){
     loader.classList.add('fullyLoaded');
     setTimeout(() => {
