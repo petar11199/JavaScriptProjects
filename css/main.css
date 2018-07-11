@@ -530,17 +530,26 @@ span {
     .project .line {
         display: none;
     }
+    .project {
+        padding-right: 30px;
+    }
     .crafted h1 {
         line-height: 0.7;
     }
     .activeBar h1::after,
     .activeBar h1::before,
     .activeBar h2::after,
-    .activeBar h2::before{
+    .activeBar h2::before,
+    .loaded h1::after,
+    .loaded h1::before,
+    .loaded h2::after,
+    .loaded h2::before{
         opacity: 0;
     }
     .activeBar h1,
-    .activeBar h2 {
+    .activeBar h2,
+    .loaded h1,
+    .loaded h2 {
         animation: show 700ms ease-in-out forwards;
     }
 }
@@ -550,7 +559,7 @@ span {
         align-items: flex-end
     }
     .social-img {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     .main-img {
         position: absolute;
