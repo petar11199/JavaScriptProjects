@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Text animations</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="app">Welcome. Type your text below!</div>
+        <input type="text" placeholder="Enter any text!" maxlength="50">
+        <div class="fx">
+            <div class="fx fx--fdc">
+                <p>Animation speed</p>
+                <select id="speed">
+                    <option value="250">250 ms</option>
+                    <option value="500" selected>500 ms</option>
+                    <option value="750">750 ms</option>
+                    <option value="1000">1000 ms</option>
+                </select>
+            </div>
+            <div class="fx fx--fdc">
+                <p>Animation name</p>
+                <select id="animName">
+                    <option value="updown" selected>Up and Down</option>
+                    <option value="wave">Wave</option>
+                </select>
+            </div>
+
+            <button type="submit">Animate</button>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
