@@ -7,4 +7,5 @@ If you wish to see code for every one of them, visit `projects` folder with the 
 So far you can find:
 
 > - #01 Tic Tac Toe; 
-> -  #02 Analog Clock;
+> - #02 Analog Clock;
+> - #03 Text Animations;
