@@ -5,7 +5,6 @@ const dropdown = document.querySelector('#animName');
 const speedForm = document.querySelector('#speed');
 
 var interval = 100;                         // Default interval between letters
-var animSpeed = 500;                        // Default animation speed in ms
 
 function startAnimation() {
     while (app.firstChild) {                // 
@@ -25,20 +24,12 @@ function startAnimation() {
 }
 
 function selectAnimation() {
-    var select = dropdown.value;
-    animSpeed = speedForm.value;
     const letters = document.querySelectorAll('span');
-
     setTimeout(() => {
         letters.forEach((el, index) => {
             setTimeout(() => {
-                el.style.animationDuration = animSpeed + 'ms';
-                if (select === 'updown') { 
-                    el.classList.add('upDownAnim');
-                }
-                if (select === 'wave') {
-                    el.classList.add('wave');
-                }
+                el.style.animationDuration = speedForm.value + 'ms';
+                el.classList.add(dropdown.value);
             }, (index * interval));
         });
     }, 50);

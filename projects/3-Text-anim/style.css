@@ -91,10 +91,10 @@ span {
 }
 
 /* UP DOWN */
-.upDownAnim:nth-of-type(odd) {
+.updown:nth-of-type(odd) {
     animation: fromTop forwards;
 }
-.upDownAnim:nth-of-type(even) {
+.updown:nth-of-type(even) {
     animation: fromBottom forwards;
 }
 @keyframes fromTop {
@@ -125,3 +125,25 @@ span {
     50% {top: -20px}
     100% {top: 0}
 }
+
+/* VISIBILITY */
+.visibility{
+    animation: visibility forwards;
+}
+@keyframes visibility {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* REVEAL */
+.reveal{
+    animation: reveal forwards;
+    opacity: 0;
+}
+@keyframes reveal {
+    0% {transform: rotate(0deg); opacity: 0;}
+    50% {transform: rotate(90deg); opacity: 0;}
+    100% {transform: rotate(0deg); opacity: 1;}
+}
+
