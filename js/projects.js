@@ -12,8 +12,14 @@ var allProjects = [
         secondTitle: 'Simple working analog clock',
         href: 'projects/2-Clock/clock.html'
     },
-    {
+	{
         number: 3,
+        title: 'Text Animations',
+        secondTitle: 'Type your text and choose animation',
+        href: 'projects/3-Text-anim/index.html'
+    },
+    {
+        number: 4,
         title: 'More coming soon!',
         secondTitle: '',
         href: ''
